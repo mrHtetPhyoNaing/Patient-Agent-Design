@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ကိုအောင်ဌေး | ကိုယ်စားလှယ် (ဟင်္သာတခရိုင်)</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="header__block">
+					<p class="header__block--small">ကိုအောင်ဌေး</p>
+					<p class="header__block--hero">Grand Hantha ဟင်္သာတခရိုင် ကိုယ်စားလှယ်</p>
+					<nav>
+						<ul>
+							<li class="active"><a href="#">Patient Register Form</a></li>
+							<li><a href="#">Doctors</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<div class="form">
+
+				<!-- Patient Information -->
+				<div class="form__part">
+					<div class="form__part--label">
+						Patient information
+						<span>Please fill out the fields to register</span>
+					</div>
+					<div class="form__part--fields">
+						<!-- name & gender -->
+						<div class="fields">
+							<div class="form__group">
+								<label for="name">Name<span class="text-danger">*</span></label>
+								<input type="text" name="name" id="name">
+							</div>
+							<div class="form__group full-width">
+								<label for="gender">Gender<span class="text-danger">*</span></label>
+								<select name="gender" id="gender" class="full-width">
+									<option value="1">Male</option>
+									<option value="2">Female</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- father name -->
+						<div class="form__group">
+							<label for="father_name">Father Name<span class="text-danger">*</span></label>
+							<input type="text" name="father_name" id="father_name">
+						</div>
+
+						<!-- birthday & age -->
+						<div class="fields">
+							<div class="form__group">
+								<label for="birthday">Birthday<span class="text-danger">*</span></label>
+								<input type="text" name="birthday" id="birthday">
+							</div>
+							<div class="form__group">
+								<label for="age">Age<span class="text-danger">*</span></label>
+								<input type="text" name="age" id="age">
+							</div>
+						</div>
+
+						<!-- nrc -->
+						<div class="fields">
+							<div class="form__group full-width">
+								<label for="nrc-1">NRC<span class="text-danger">*</span></label>
+								<div class="form__group--1">
+									<select name="state" id="state">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="1">6</option>
+										<option value="2">7</option>
+										<option value="3">8</option>
+										<option value="4">9</option>
+										<option value="5">10</option>
+										<option value="5">11</option>
+										<option value="5">12</option>
+										<option value="5">13</option>
+										<option value="5">14</option>
+										<option value="5">15</option>
+									</select>
+									<select name="distince" id="distinct">
+										<option value="1">AbCdNa</option>
+										<option value="2">AcWiBc</option>
+										<option value="3">IxEbQs</option>
+										<option value="4">EcCsSe</option>
+										<option value="5">PqOuYd</option>
+									</select>
+									<input type="text" name="numbers" placeholder="123456">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="hr__line"></div>
+
+				<!-- Visit Information -->
+				<div class="form__part">
+					<div class="form__part--label">
+						Visit information
+						<span>Why you want to register</span>
+					</div>
+					<div class="form__part--fields">
+						<!-- appointment date -->
+						<div class="form__group">
+							<label for="appointment-date">Appointment Date<span class="text-danger">*</span></label>
+							<input type="text" name="appointment-date" id="appointment-date">
+						</div>
+
+						<!-- referal reason -->
+						<div class="form__group">
+							<label for="referal-reason">Referal Reason</label>
+							<textarea name="referal_reason" id="referal-reason" cols="auto" rows="10">
+							</textarea>
+						</div>
+
+						<!-- disease & doctor -->
+						<div class="fields">
+							<div class="form__group full-width">
+								<label for="disease">Disease<span class="text-danger">*</span></label>
+								<select name="disease" id="disease" class="full-width">
+									<option value="1">Heart</option>
+									<option value="2">Brain</option>
+									<option value="3">...</option>
+								</select>
+							</div>
+
+							<div class="form__group full-width">
+								<label for="doctor">Doctor<span class="text-danger">*</span></label>
+								<select name="doctor" id="doctor" class="full-width">
+									<option value="1">Dr.Khin Maung Lwin</option>
+									<option value="2">Dr.Phyo Thiha</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="hr__line"></div>
+
+				<!-- Contact Person -->
+				<div class="form__part">
+					<div class="form__part--label">
+						Contact person information
+						<span>Whome we contact to</span>
+					</div>
+					<div class="form__part--fields">
+						<!-- contact person name & relation -->
+						<div class="fields">
+							<div class="form__group">
+								<label for="contact-person">Contact Person Name<span class="text-danger">*</span></label>
+								<input type="text" contact-person="contact-person" id="contact-person">
+							</div>
+							<div class="form__group full-width">
+								<label for="relation">Relation</label>
+								<select name="relation" id="relation" class="full-width">
+									<option value="1">Uncle</option>
+									<option value="2">Aunty</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- phone number -->
+						<div class="form__group">
+							<label for="contact-person-phone">Contact Person Phone<span class="text-danger">*</span></label>
+							<input type="text" name="contact-person-phone" id="contact-person-phone">
+						</div>
+
+					</div>
+				</div>
+
+				<div class="hr__line"></div>
+
+				<button class="btn btn-primary">
+					Register
+				</button>
+
+			</div>
+		</div>
+	</body>
+
+</html>
