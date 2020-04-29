@@ -89,14 +89,22 @@ body {
 .header__block > nav ul li a {
   color: inherit;
   text-decoration: none;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
-.active {
-  color: rgb(0, 102, 128);
-  background-color: white;
-  padding: 0.5rem 2rem;
-  border-radius: 100rem;
+.header__block > nav ul li a:hover {
+  color: rgb(236, 236, 236);
+  background-color: rgba(18, 178, 218, 0.452);
+  border-radius: 1rem;
+}
+
+.header__block > nav ul li.active {
+  color: rgb(236, 236, 236);
+  background-color: rgba(18, 178, 218, 0.637);
+  border-radius: 1rem;
+  padding: 0.5rem 0;
 }
 
 /***************************
@@ -115,12 +123,13 @@ body {
 .form__part {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 .form__part--label {
   /* display: block; */
   flex: 1;
-  color: rgb(98, 107, 119);
+  color: rgb(80, 86, 94);
 }
 
 .form__part--label > span {
