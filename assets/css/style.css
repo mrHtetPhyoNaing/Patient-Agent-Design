@@ -2,27 +2,45 @@
 /* +Fonts
 ****************************/
 @font-face {
-  font-family: hero-font;
-  src: url(../fonts/product-sans/ProductSansRegular.ttf);
+  font-family: primary-font;
+  src: url(../fonts/HKGrotesk/HKGrotesk-Regular.otf);
 }
 
 @font-face {
-  font-family: primary-font;
-  src: url(../fonts/HKGrotesk/HKGrotesk-Regular.otf);
+  font-family: secondary-font;
+  src: url(../fonts/product-sans/ProductSansRegular.ttf);
 }
 
 /***************************
 /* +Colors
 ****************************/
 :root {
-  --primary: red;
+  --white: white;
+  --red: red;
+  --gold: gold;
+
+  --text-color-body: #777;
+  --text-color-nav: rgb(236, 236, 236);
+  --text-color-form-part-label: rgb(80, 86, 94);
+  --text-color-form-part-spam: rgb(185, 185, 185);
+
+  --bg-color-body: #190b25;
+  --bg-color-nav: rgba(18, 178, 218, 0.452);
+  --bg-color-inputs: rgba(235, 251, 255, 0.418);
+
+  --border-color-inputs: rgba(197, 196, 196, 0.308);
+  --border-color-input-focus: rgb(0, 187, 0);
+
+  --hr-color: rgb(238, 238, 238);
+
+  --btn-primary-color-hover: rgb(231, 199, 18);
 }
 
 /***************************
 /* +Utilities
 ****************************/
 .text-danger {
-  color: red;
+  color: var(--red);
 }
 
 /***************************
@@ -42,9 +60,9 @@ html {
 }
 
 body {
-  color: #777;
+  color: var(--text-color-body);
   box-sizing: border-box;
-  background-color: #190b25;
+  background-color: var(--bg-color-body);
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2330ff23' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
@@ -52,21 +70,17 @@ body {
   margin: 0 auto;
   max-width: 85rem;
   margin-bottom: 10rem;
-  /* background-color: red; */
 }
 
 /***************************
 /* +Header
 ****************************/
 .header {
-  /* background: linear-gradient(to right, rgb(5, 223, 169), rgb(1, 43, 82)); */
   padding: 7rem 0;
 }
 
 .header__block {
-  /* max-width: 70rem; */
-  color: white;
-  /* background-color: green; */
+  color: var(--white);
 }
 
 .header__block--small {
@@ -95,14 +109,14 @@ body {
 }
 
 .header__block > nav ul li a:hover {
-  color: rgb(236, 236, 236);
-  background-color: rgba(18, 178, 218, 0.452);
+  color: var(--text-color-nav);
+  background-color: var(--bg-color-nav);
   border-radius: 1rem;
 }
 
 .header__block > nav ul li.active {
-  color: rgb(236, 236, 236);
-  background-color: rgba(18, 178, 218, 0.637);
+  color: var(--text-color-nav);
+  background-color: var(--bg-color-nav);
   border-radius: 1rem;
   padding: 0.5rem 0;
 }
@@ -112,7 +126,7 @@ body {
 ****************************/
 .form {
   width: 100%;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 1rem;
   padding: 2rem;
   font-size: 1.7rem;
@@ -127,16 +141,15 @@ body {
 }
 
 .form__part--label {
-  /* display: block; */
   flex: 1;
-  color: rgb(80, 86, 94);
+  color: var(--text-color-form-part-label);
 }
 
 .form__part--label > span {
   display: block;
   font-style: italic;
   font-size: 1.4rem;
-  color: rgb(185, 185, 185);
+  color: var(--text-color-form-part-spam);
 }
 
 .form__part--fields {
@@ -189,8 +202,8 @@ select,
 textarea {
   padding: 0.8rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(197, 196, 196, 0.308);
-  background-color: rgba(235, 251, 255, 0.418);
+  border: 1px solid var(--border-color-inputs);
+  background-color: var(--bg-color-inputs);
 }
 
 input {
@@ -205,7 +218,7 @@ select {
 input:focus,
 select:focus,
 textarea:focus {
-  border: 1px solid rgb(0, 187, 0);
+  border: 1px solid var(--border-color-input-focus);
   outline: none;
 }
 
@@ -220,7 +233,7 @@ input[type="text"]:not(:last-child) {
 .hr__line {
   max-width: inherit;
   height: 1px;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--hr-color);
   margin: 2rem -2rem;
 }
 
@@ -236,10 +249,10 @@ button {
 }
 
 .btn-primary {
-  background-color: gold;
+  background-color: var(--gold);
 }
 
 .btn-primary:hover {
   cursor: pointer;
-  background-color: rgb(231, 199, 18);
+  background-color: var(--btn-primary-color-hover);
 }
