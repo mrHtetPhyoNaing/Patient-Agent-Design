@@ -25,10 +25,10 @@
   --gold: gold;
   --dark-gray: rgb(80, 86, 94);
 
-  --text-color-body: #777;
+  --text-color-body: rgb(93, 93, 93);
   --text-color-nav: rgb(236, 236, 236);
-  --text-color-form-part-label: rgb(80, 86, 94);
-  --text-color-form-part-spam: rgb(185, 185, 185);
+  --text-color-form-part-label: rgb(55, 58, 63);
+  --text-color-form-part-spam: rgb(122, 122, 122);
 
   --bg-color-body: #190b25;
   --bg-color-nav: rgba(18, 178, 218, 0.452);
