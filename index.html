@@ -7,6 +7,7 @@
 		<title>Ko Aung Htay | Resigter</title>
 		<link rel="stylesheet" href="assets/css/jquery.datetimepicker.css">
 		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/media-queries.css">
 	</head>
 
 	<body>
@@ -34,10 +35,10 @@
 						Patient information
 						<span>Please fill out the fields to register</span>
 					</div>
-					<div class="form__part--fields">
+					<div class="form__part--fields full-width">
 						<!-- name & gender -->
-						<div class="fields">
-							<div class="form__group">
+						<div class=" fields">
+							<div class="form__group full-width">
 								<label for="name">Name<span class="text-danger">*</span></label>
 								<input type="text" name="name" id="name">
 							</div>
@@ -58,14 +59,14 @@
 
 						<!-- birthday & age -->
 						<div class="fields">
-							<div class="form__group">
+							<div class="form__group full-width">
 								<label for="birthday">Birthday<span class="text-danger">*</span><i>(DD-MM-YY)</i></label>
 								<input type="text" name="birthday" id="birthday" readonly="readonly"
-									placeholder="You'were born on...">
+									placeholder="You'were born on..." class="pointer-cursor">
 							</div>
-							<div class="form__group">
+							<div class="form__group full-width">
 								<label for="age">Age<span class="text-danger">*</span></label>
-								<input type="text" name="age" id="age">
+								<input type="text" name="age" id="age" readonly="readonly">
 							</div>
 						</div>
 
@@ -73,32 +74,38 @@
 						<div class="fields">
 							<div class="form__group full-width">
 								<label for="nrc-1">NRC<span class="text-danger">*</span></label>
-								<div class="form__group--1">
-									<select name="state" id="state">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="1">6</option>
-										<option value="2">7</option>
-										<option value="3">8</option>
-										<option value="4">9</option>
-										<option value="5">10</option>
-										<option value="5">11</option>
-										<option value="5">12</option>
-										<option value="5">13</option>
-										<option value="5">14</option>
-										<option value="5">15</option>
-									</select>
-									<select name="distince" id="distinct">
-										<option value="1">AbCdNa</option>
-										<option value="2">AcWiBc</option>
-										<option value="3">IxEbQs</option>
-										<option value="4">EcCsSe</option>
-										<option value="5">PqOuYd</option>
-									</select>
-									<input type="text" name="numbers" placeholder="123456">
+								<div class="form__group--1 full-width">
+									<div class="row full-width">
+										<select name="state" id="state">
+											<option value="Choose" selected disabled>State</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+										</select>
+										<select name="distince" id="township">
+											<option selected disabled>Townships</option>
+										</select>
+										<select name="distince" id="type">
+											<option selected disabled>Types</option>
+											<option>N</option>
+											<option>Y</option>
+											<option>T</option>
+										</select>
+									</div>
+									<div class="row full-width">
+										<input type="text" name="numbers" placeholder="123456" class="full-width">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -113,11 +120,12 @@
 						Visit information
 						<span>Why you want to register</span>
 					</div>
-					<div class="form__part--fields">
+					<div class="form__part--fields full-width">
 						<!-- visiting date -->
 						<div class="form__group">
 							<label for="visiting-date">Visiting Date<span class="text-danger">*</span><i>(DD-MM-YY)</i></label>
-							<input type="text" name="visiting-date" id="visiting-date" placeholder="You're coming on...">
+							<input type="text" name="visiting-date" id="visiting-date" placeholder="You're coming on..."
+								readonly="readonly" class="pointer-cursor">
 						</div>
 
 						<!-- referal reason -->
@@ -157,10 +165,10 @@
 						Contact person information
 						<span>Whome we contact to</span>
 					</div>
-					<div class="form__part--fields">
+					<div class="form__part--fields full-width">
 						<!-- contact person name & relation -->
 						<div class="fields">
-							<div class="form__group">
+							<div class="form__group full-width">
 								<label for="contact-person">Contact Person Name<span class="text-danger">*</span></label>
 								<input type="text" contact-person="contact-person" id="contact-person">
 							</div>
@@ -197,6 +205,9 @@
 		<!-- Js: datepicker -->
 		<script src="assets/js/jquery.datetimepicker.full.js"></script>
 		<script src="assets/js/datePicker.js"></script>
+
+		<!-- <script type="text/javascript" src="nrc-data.json"></script> -->
+		<script src="assets/js/index.js"></script>
 	</body>
 
 </html>

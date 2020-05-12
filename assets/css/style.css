@@ -54,6 +54,10 @@
   font-family: pyidaungsu, serif;
 }
 
+.pointer-cursor {
+  cursor: pointer;
+}
+
 /***************************
 /* +Basic
 ****************************/
@@ -183,20 +187,23 @@ body {
 
 .form__group--1 {
   display: flex;
-  max-width: 100%;
-  flex: 3;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.form__group--1 > * {
-  flex: 1;
+  flex-direction: row;
 }
 
 .form__group--1 > *:not(:last-child) {
   margin-right: 1rem !important;
+}
+
+.form__group--1 .row > *:not(:last-child) {
+  margin-right: 1rem !important;
+}
+
+.form__group--1 .row {
+  display: flex;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .fields {
