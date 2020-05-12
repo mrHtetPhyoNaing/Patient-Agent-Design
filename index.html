@@ -4,7 +4,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>ကိုအောင်ဌေး | ကိုယ်စားလှယ် (ဟင်္သာတခရိုင်)</title>
+		<title>Ko Aung Htay | Resigter</title>
+		<link rel="stylesheet" href="assets/css/jquery.datetimepicker.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 
@@ -12,13 +13,14 @@
 		<div class="container">
 			<header class="header">
 				<div class="header__block">
-					<p class="header__block--small">ကိုအောင်ဌေး</p>
-					<p class="header__block--hero">Grand Hantha ဟင်္သာတခရိုင် ကိုယ်စားလှယ်</p>
+					<p class="header__block--small pyidaungsu">ကိုအောင်ဌေး</p>
+					<p class="header__block--hero">Grand Hantha
+						<span class="pyidaungsu">ဟင်္သာတခရိုင် ကိုယ်စားလှယ်</span>
+					</p>
 					<nav>
 						<ul>
 							<li class="active"><a href="#">Patient Register Form</a></li>
-							<li><a href="#">Doctors</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -57,8 +59,9 @@
 						<!-- birthday & age -->
 						<div class="fields">
 							<div class="form__group">
-								<label for="birthday">Birthday<span class="text-danger">*</span></label>
-								<input type="text" name="birthday" id="birthday">
+								<label for="birthday">Birthday<span class="text-danger">*</span><i>(DD-MM-YY)</i></label>
+								<input type="text" name="birthday" id="birthday" readonly="readonly"
+									placeholder="You'were born on...">
 							</div>
 							<div class="form__group">
 								<label for="age">Age<span class="text-danger">*</span></label>
@@ -111,10 +114,10 @@
 						<span>Why you want to register</span>
 					</div>
 					<div class="form__part--fields">
-						<!-- appointment date -->
+						<!-- visiting date -->
 						<div class="form__group">
-							<label for="appointment-date">Appointment Date<span class="text-danger">*</span></label>
-							<input type="text" name="appointment-date" id="appointment-date">
+							<label for="visiting-date">Visiting Date<span class="text-danger">*</span><i>(DD-MM-YY)</i></label>
+							<input type="text" name="visiting-date" id="visiting-date" placeholder="You're coming on...">
 						</div>
 
 						<!-- referal reason -->
@@ -187,6 +190,13 @@
 
 			</div>
 		</div>
+
+		<!-- Js: Jquery -->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!-- Js: datepicker -->
+		<script src="assets/js/jquery.datetimepicker.full.js"></script>
+		<script src="assets/js/datePicker.js"></script>
 	</body>
 
 </html>

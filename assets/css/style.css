@@ -11,6 +11,11 @@
   src: url(../fonts/product-sans/ProductSansRegular.ttf);
 }
 
+@font-face {
+  font-family: pyidaungsu;
+  src: url(../fonts/Pyidaungsu.ttf);
+}
+
 /***************************
 /* +Colors
 ****************************/
@@ -18,6 +23,7 @@
   --white: white;
   --red: red;
   --gold: gold;
+  --dark-gray: rgb(80, 86, 94);
 
   --text-color-body: #777;
   --text-color-nav: rgb(236, 236, 236);
@@ -32,6 +38,7 @@
   --border-color-input-focus: rgb(0, 187, 0);
 
   --hr-color: rgb(238, 238, 238);
+  --hr-color-contact: rgba(238, 238, 238, 0.308);
 
   --btn-primary-color-hover: rgb(231, 199, 18);
 }
@@ -41,6 +48,10 @@
 ****************************/
 .text-danger {
   color: var(--red);
+}
+
+.pyidaungsu {
+  font-family: pyidaungsu, serif;
 }
 
 /***************************
@@ -70,6 +81,11 @@ body {
   margin: 0 auto;
   max-width: 85rem;
   margin-bottom: 10rem;
+}
+
+::placeholder {
+  font-size: 1.3rem;
+  font-family: primary-font, serif;
 }
 
 /***************************
@@ -237,6 +253,20 @@ input[type="text"]:not(:last-child) {
   margin: 2rem -2rem;
 }
 
+.hr__line--contact {
+  max-width: inherit;
+  height: 1px;
+  background-color: var(--hr-color-contact);
+  margin: 2rem -2rem;
+}
+
+.vr__line {
+  width: 1px;
+  max-height: inherit;
+  background-color: var(--hr-color);
+  margin: -2rem 0rem;
+}
+
 button {
   margin-left: auto;
 }
@@ -255,4 +285,42 @@ button {
 .btn-primary:hover {
   cursor: pointer;
   background-color: var(--btn-primary-color-hover);
+}
+
+/***************************
+/* +Contact
+****************************/
+.contact {
+  color: var(--dark-gray);
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  display: flex;
+  background-color: transparent;
+}
+
+.contact__img {
+  flex: 0 0 35%;
+}
+
+.contact__img--img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.contact__information {
+  background-color: var(--white);
+  padding: 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__information > * {
+  flex: 1 0 0;
+  padding-left: 1rem;
 }
