@@ -17,5 +17,7 @@
     "url": "https://github.com/mrHtetPhyoNaing/Patient-Agent-Design/issues"
   },
   "homepage": "https://github.com/mrHtetPhyoNaing/Patient-Agent-Design#readme",
-  "dependencies": {}
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
 }
